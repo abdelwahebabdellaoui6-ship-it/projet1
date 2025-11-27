@@ -1,0 +1,555 @@
+/* ============================================
+   COURSE DETAILS - PROFESSIONAL STYLING
+   ============================================ */
+
+/* Variables CSS pour faciliter la maintenance */
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary-color: #f59e0b;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --transition: all 0.3s ease;
+}
+
+/* ============================================
+   CONTENEUR PRINCIPAL
+   ============================================ */
+
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  background-color: var(--bg-light);
+  min-height: 100vh;
+}
+
+/* Bouton retour */
+.detail-container > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.detail-container > button:hover {
+  background-color: var(--bg-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.detail-container > button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   EN-TÊTE DU COURS
+   ============================================ */
+
+.detail-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* Image du cours */
+.detail-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.detail-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Informations du cours */
+.detail-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.detail-info > p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   INSTRUCTEUR
+   ============================================ */
+
+.detail-instructor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.detail-instructor img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-instructor span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   STATISTIQUES
+   ============================================ */
+
+.detail-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.detail-stats > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(10px);
+}
+
+.detail-stats svg {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary-color);
+}
+
+/* ============================================
+   CARACTÉRISTIQUES
+   ============================================ */
+
+.detail-features {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-features > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #ecfdf5;
+  color: #059669;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid #a7f3d0;
+}
+
+.detail-features svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   PRIX
+   ============================================ */
+
+.detail-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  border: 2px dashed var(--border-color);
+}
+
+.detail-price > span:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.detail-price .original {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+/* ============================================
+   BOUTON D'INSCRIPTION
+   ============================================ */
+
+.enroll-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.enroll-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.enroll-btn:hover::before {
+  left: 100%;
+}
+
+.enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.enroll-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   LISTE DES CARACTÉRISTIQUES
+   ============================================ */
+
+.detail-features-list {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.detail-features-list h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--primary-color);
+  display: inline-block;
+}
+
+.detail-features-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.detail-features-list li {
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-left: 4px solid var(--primary-color);
+  transition: var(--transition);
+  position: relative;
+  padding-left: 3rem;
+}
+
+.detail-features-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.detail-features-list li:hover {
+  background-color: white;
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+  border-left-color: var(--secondary-color);
+}
+
+.detail-features-list li:hover::before {
+  background-color: var(--secondary-color);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 968px) {
+  .detail-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .detail-image {
+    height: 300px;
+  }
+
+  .detail-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .detail-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .detail-features {
+    flex-direction: column;
+  }
+
+  .detail-features-list ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .detail-container {
+    padding: 1rem;
+  }
+
+  .detail-header {
+    padding: 1.5rem;
+  }
+
+  .detail-image {
+    height: 250px;
+  }
+
+  .detail-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .detail-price > span:first-child {
+    font-size: 2rem;
+  }
+
+  .detail-price .original {
+    font-size: 1.25rem;
+  }
+
+  .detail-features-list {
+    padding: 1.5rem;
+  }
+
+  .detail-features-list h2 {
+    font-size: 1.5rem;
+  }
+
+  .detail-features-list li {
+    padding: 0.75rem 1rem;
+    padding-left: 2.5rem;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-container > * {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.detail-header {
+  animation-delay: 0.1s;
+}
+
+.detail-features-list {
+  animation-delay: 0.2s;
+}
+
+/* ============================================
+   EFFETS SUPPLÉMENTAIRES
+   ============================================ */
+
+.detail-container > button,
+.enroll-btn,
+.detail-features-list li {
+  position: relative;
+  z-index: 1;
+}
+
+/* Effet de brillance sur le bouton d'inscription */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Scroll smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Amélioration de la lisibilité */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ===== BUTTON STYLE ===== */
+.btn-register {
+  background: linear-gradient(135deg, #4a6cf7, #6a89ff);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.btn-register:hover {
+  background: linear-gradient(135deg, #3653d8, #5773ff);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(80, 105, 255, 0.4);
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+  margin-top: 30px;
+  animation: fadeIn 0.6s ease-in-out;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  max-width: 420px;
+}
+
+/* ===== FORM INPUTS ===== */
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 5px rgba(80, 105, 255, 0.4);
+  outline: none;
+}
+
+/* ===== FORM BUTTON ===== */
+.form-container button[type="submit"] {
+  background: #4a6cf7;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button[type="submit"]:hover {
+  background: #3653d8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,309 @@
+/* ==================== Container Principal ==================== */
+.contact-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* ==================== Header ==================== */
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* ==================== Content Grid ==================== */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* ==================== Section Info ==================== */
+.contact-info-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #333;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+/* ==================== Info Cards ==================== */
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  min-width: 50px;
+}
+
+.info-details {
+  flex: 1;
+}
+
+.info-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.info-text {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ==================== Social Section ==================== */
+.social-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.social-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  margin-top: 0;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn.facebook {
+  background-color: #1877f2;
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.twitter {
+  background-color: #1da1f2;
+}
+
+/* ==================== Form Section ==================== */
+.contact-form-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ==================== Map Section ==================== */
+.map-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.map-placeholder {
+  height: 300px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #dee2e6;
+}
+
+.map-text {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #667eea;
+}
+
+.map-subtext {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .map-placeholder {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 10px;
+  }
+
+  .contact-header {
+    padding: 30px 15px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-info-section,
+  .contact-form-section,
+  .map-section {
+    padding: 20px;
+  }
+
+  .social-btn {
+    font-size: 0.85rem;
+    padding: 8px 15px;
+  }
+}

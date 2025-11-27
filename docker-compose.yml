@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend_service:
+    build:
+      context: ./learning-backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"   # Backend على 5000
+    volumes:
+      - ./learning-backend:/app
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+      - PORT=5000      # تأكد أن الـ backend يستعمل PORT=5000
+
+  frontend_service:
+    build:
+      context: ./learning
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"     # React أو Angular على 3000
+    volumes:
+      - ./learning:/app
+    depends_on:
+      - backend_service
+    environment:
+      - REACT_APP_API_URL=http://backend_service:5000/api
+      # إذا Angular: apiUrl=http://backend_service:5000/api
+
+  mongo:
+    image: mongo:8.0
+    container_name: projet-mongo-1
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

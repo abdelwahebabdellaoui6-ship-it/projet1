@@ -1,0 +1,197 @@
+/* ...existing code... */
+/* Navbar principal */
+.app-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 120;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(250,250,252,0.75));
+  box-shadow: 0 4px 18px rgba(12,18,40,0.06);
+  border-bottom: 1px solid rgba(8,15,40,0.04);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+/* inner container */
+.navbar-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+/* brand / logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0b1220;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+}
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#2563eb,#06b6d4);
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.14);
+}
+.brand-name {
+  display: inline-block;
+}
+
+/* nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.nav-links ul {
+  display: flex;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav-links a {
+  color: #0b1220;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.95;
+  transition: all .18s ease;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background: rgba(37,99,235,0.06);
+  color: #064eac;
+  outline: none;
+}
+.nav-links a.active {
+  background: linear-gradient(90deg, rgba(37,99,235,0.12), rgba(6,182,212,0.06));
+  color: #2563eb;
+  box-shadow: inset 0 -2px 0 rgba(37,99,235,0.06);
+}
+
+/* CTA */
+.nav-cta { margin-left: 12px; display: flex; align-items: center; }
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.btn.primary {
+  background: linear-gradient(90deg,#2563eb,#06b6d4);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.14);
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(8,15,40,0.06);
+  color: #0b1220;
+}
+
+/* hamburger (mobile) */
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: #0b1220;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile menu panel */
+@media (max-width: 880px) {
+  .hamburger { display: inline-flex; }
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 18px;
+    left: 18px;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(12,18,40,0.08);
+    padding: 14px;
+    transform-origin: top right;
+    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s ease;
+    opacity: 0;
+    transform: translateY(-8px) scale(.98);
+    pointer-events: none;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-cta { margin-top: 6px; width: 100%; }
+  .nav-cta .btn { width: 100%; padding: 12px; font-size: 15px; border-radius: 10px; }
+}
+
+/* accessibility focus */
+a:focus, button:focus {
+  outline: 3px solid rgba(37,99,235,0.14);
+  outline-offset: 3px;
+}
+
+/* small helpers and fine-tuning */
+.navbar-inner > * { min-height: 44px; }
+.nav-links a { white-space: nowrap; }
+.brand-name { user-select: none; }
+
+/* dark-mode friendly tweaks (optional) */
+@media (prefers-color-scheme: dark) {
+  .app-navbar {
+    background: linear-gradient(180deg, rgba(10,12,18,0.75), rgba(8,10,16,0.6));
+    border-bottom-color: rgba(255,255,255,0.04);
+  }
+  .nav-links a, .brand-name { color: #e6eefb; }
+  .logo-mark { box-shadow: 0 6px 18px rgba(2,6,23,0.5); }
+  .hamburger span { background: #e6eefb; }
+  .nav-links { background: linear-gradient(180deg,#0b1220,#071027); color: #e6eefb; }
+}
+/* ...existing code... */
